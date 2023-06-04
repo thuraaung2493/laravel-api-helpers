@@ -1,6 +1,6 @@
 {
-  "name": "thuraaung/package-name",
-  "description": "Package description.",
+  "name": "thuraaung2493/laravel-api-helpers",
+  "description": "A simple package for creating API endpoints with Laravel.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -13,22 +13,37 @@
   ],
   "autoload": {
     "psr-4": {
-      "Thuraaung\\Namespace\\": "src/"
+      "Thuraaung\\ApiHelpers\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Thuraaung\\Namespace\\Tests\\": "tests/"
+      "Thuraaung\\ApiHelpers\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Thuraaung\\ApiHelpers\\Providers\\PackageServiceProvider"
+      ],
+      "aliases": [
+        "Headers"
+      ]
     }
   },
   "require": {
-    "php": "^8.2"
+    "php": "^8.2",
+    "illuminate/support": "^10.12",
+    "laravel/sanctum": "^3.2",
+    "thecodingmachine/safe": "^2.5"
   },
   "require-dev": {
     "laravel/pint": "^1.10",
     "nunomaduro/larastan": "^2.0",
+    "nunomaduro/mock-final-classes": "^1.2",
     "orchestra/testbench": "^8.5",
-    "pestphp/pest": "^2.6"
+    "pestphp/pest": "^2.6",
+    "thecodingmachine/phpstan-safe-rule": "^1.2"
   },
   "config": {
     "sort-packages": true,
