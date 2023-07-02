@@ -21,7 +21,7 @@ final readonly class MessageResponse implements Responsable
     /**
      * @return array{data:null,status:int,message:string}
      */
-    private function getData(): array
+    public function getData(): array
     {
         return [
             'data' => null,

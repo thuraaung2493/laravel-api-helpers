@@ -21,14 +21,12 @@ final readonly class TokenResponse implements Responsable
     }
 
     /**
-     * @return array{data:array{token:string},status:int,message:string}
+     * @return array{token:string,status:int,message:string}
      */
-    private function getData(): array
+    public function getData(): array
     {
         return [
-            'data' => [
-                'token' => $this->token->plainTextToken,
-            ],
+            'token' => $this->token->plainTextToken,
             'status' => $this->status->value,
             'message' => $this->message,
         ];

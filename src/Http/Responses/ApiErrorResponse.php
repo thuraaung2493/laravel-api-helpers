@@ -22,7 +22,7 @@ final readonly class ApiErrorResponse implements Responsable
     /**
      * @return array{title:string,description:string,status:int}
      */
-    private function getData(): array
+    public function getData(): array
     {
         return [
             'title' => $this->title,

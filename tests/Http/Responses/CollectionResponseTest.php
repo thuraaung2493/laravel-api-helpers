@@ -14,14 +14,14 @@ use function Safe\json_decode;
 it('can create a new Collection Response', function (): void {
     expect(
         new CollectionResponse(
-            data: new ResourceCollection(new Collection()),
+            resource: new ResourceCollection(new Collection()),
         )
     )->toBeInstanceOf(CollectionResponse::class);
 });
 
 it('can create a Json Response', function (): void {
     $response = (new CollectionResponse(
-        data: new ResourceCollection(new Collection()),
+        resource: new ResourceCollection(new Collection()),
     ))->toResponse(
         request: Request::create(
             uri: '/',
