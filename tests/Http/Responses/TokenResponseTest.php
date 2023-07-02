@@ -21,15 +21,12 @@ it('can create a new Message Response', function (): void {
 
 it('can create a Json Response', function (): void {
     $response = (new TokenResponse(
-        token: new NewAccessToken(new PersonalAccessToken(), ''),
+        token: new NewAccessToken(new PersonalAccessToken(), 'plaintesttoken'),
     ))->toResponse(
         request: Request::create(
             uri: '/',
         )
     );
-
-    $token  = new stdClass();
-    $token->token = '';
 
     expect(
         $response,
@@ -40,7 +37,7 @@ it('can create a Json Response', function (): void {
     )->toBeArray()->and(
         json_decode($response->getContent())
     )->toMatchObject([
-        'data' => $token,
+        'token' => 'plaintesttoken',
         'message' => 'Success.',
         'status' => Status::OK->value,
     ]);

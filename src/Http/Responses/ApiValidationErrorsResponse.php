@@ -23,7 +23,7 @@ final readonly class ApiValidationErrorsResponse implements Responsable
     /**
      * @return array{title:string,errors:MessageBag,status:int}
      */
-    private function getData(): array
+    public function getData(): array
     {
         return [
             'title' => $this->title,
