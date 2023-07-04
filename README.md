@@ -26,6 +26,7 @@ composer require thuraaung2493/laravel-api-helpers@dev
 | ----------------------------------------------------------------------- | ---------------------------------------------------- |
 | Thuraaung\ApiHelpers\Http\Responses\ModelResponse::class                | It returns json response for **JsonResource**.       |
 | Thuraaung\ApiHelpers\Http\Responses\CollectionResponse::class           | It returns json response for **CollectionResource**. |
+| Thuraaung\ApiHelpers\Http\Responses\PaginatedResponse::class            | It returns json response for **PaginationResource**. |
 | Thuraaung\ApiHelpers\Http\Responses\MessageResponse::class              | It returns json response for **Message**.            |
 | Thuraaung\ApiHelpers\Http\Responses\TokenResponse::class                | It returns json response for **Token**.              |
 | Thuraaung\ApiHelpers\Http\Responses\ApiErrorResponse::class             | It returns json response for **Errors**.             |
