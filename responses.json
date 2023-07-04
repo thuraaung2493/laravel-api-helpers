@@ -1,0 +1,74 @@
+{
+  "Api Error Response": {
+    "title": "Title",
+    "description": "Description",
+    "status": 500
+  },
+
+  "Api Validation Errors Response": {
+    "title": "Title",
+    "errors": [],
+    "status": 422
+  },
+
+  "Collection Response": {
+    "data": [],
+    "message": "Success.",
+    "status": 200
+  },
+
+  "Model Response": {
+    "data": null,
+    "message": "Success.",
+    "status": 200
+  },
+
+  "Message Response": {
+    "message": "Message",
+    "status": 200
+  },
+
+  "Token Response": {
+    "token": "Token",
+    "message": "Message",
+    "status": 200
+  },
+
+  "Paginated Response": {
+    "data": [],
+    "meta": {
+      "current_page": 1,
+      "from": 1,
+      "last_page": 1,
+      "links": [
+        {
+          "url": null,
+          "label": "&laquo; Previous",
+          "active": false
+        },
+        {
+          "url": "http://127.0.0.1:8000?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "Next &raquo;",
+          "active": false
+        }
+      ],
+      "path": "http://127.0.0.1:8000",
+      "per_page": 10,
+      "to": 4,
+      "total": 4
+    },
+    "links": {
+      "first": "",
+      "last": "",
+      "prev": null,
+      "next": null
+    },
+    "message": "Success.",
+    "status": 200
+  }
+}

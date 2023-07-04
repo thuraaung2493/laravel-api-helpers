@@ -24,7 +24,6 @@ final readonly class MessageResponse implements Responsable
     public function getData(): array
     {
         return [
-            'data' => null,
             'status' => $this->status->value,
             'message' => $this->message,
         ];

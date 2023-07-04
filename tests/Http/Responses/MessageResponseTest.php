@@ -31,7 +31,6 @@ it('can create a Json Response', function (): void {
     )->toBeArray()->and(
         json_decode($response->getContent())
     )->toMatchObject([
-        'data' => null,
         'message' => 'Success.',
         'status' => Status::OK->value,
     ]);
