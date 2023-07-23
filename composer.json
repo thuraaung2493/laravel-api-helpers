@@ -27,7 +27,7 @@
         "Thuraaung\\ApiHelpers\\Providers\\PackageServiceProvider"
       ],
       "aliases": [
-        "Headers"
+        "Thuraaung\\ApiHelpers\\Facades\\Http\\Headers"
       ]
     }
   },
