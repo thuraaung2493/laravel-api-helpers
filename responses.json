@@ -1,14 +1,14 @@
 {
   "Api Error Response": {
-    "title": "Title",
-    "description": "Description",
+    "message": "Error",
+    "details": "Details",
     "status": 500
   },
 
   "Api Validation Errors Response": {
-    "title": "Title",
-    "errors": [],
-    "status": 422
+    "message": "Validation Errors",
+    "status": 422,
+    "errors": []
   },
 
   "Collection Response": {
@@ -18,7 +18,7 @@
   },
 
   "Model Response": {
-    "data": null,
+    "data": {},
     "message": "Success.",
     "status": 200
   },

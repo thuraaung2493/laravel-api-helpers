@@ -13,7 +13,7 @@ use function Safe\json_decode;
 it('can create a new Api Validation Errors Response', function (): void {
     expect(
         new ApiValidationErrorsResponse(
-            title: 'Error',
+            message: 'Error',
             errors: new MessageBag(['This field is required!']),
         ),
     )->toBeInstanceOf(ApiValidationErrorsResponse::class);
@@ -21,7 +21,7 @@ it('can create a new Api Validation Errors Response', function (): void {
 
 it('can create a Json Response', function (): void {
     $response = (new ApiValidationErrorsResponse(
-        title: 'Error',
+        message: 'Error',
         errors: new MessageBag(['This field is required!']),
     ))->toResponse(
         request: Request::create(
@@ -37,7 +37,7 @@ it('can create a Json Response', function (): void {
     )->toBeArray()->and(
         json_decode($response->getContent())
     )->toMatchObject([
-        'title' => 'Error',
+        'message' => 'Error',
         'errors' => [['This field is required!']],
         'status' => Status::UNPROCESSABLE_CONTENT->value,
     ]);

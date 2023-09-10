@@ -14,21 +14,21 @@ final readonly class ApiValidationErrorsResponse implements Responsable
     use ReturnsJsonResponse;
 
     public function __construct(
-        private readonly string $title,
+        private readonly string $message,
         private readonly MessageBag $errors,
         private readonly Status $status = Status::UNPROCESSABLE_CONTENT,
     ) {
     }
 
     /**
-     * @return array{title:string,errors:MessageBag,status:int}
+     * @return array{message:string,errors:MessageBag,status:int}
      */
     public function getData(): array
     {
         return [
-            'title' => $this->title,
-            'errors' => $this->errors,
+            'message' => $this->message,
             'status' => $this->status->value,
+            'errors' => $this->errors,
         ];
     }
 }
