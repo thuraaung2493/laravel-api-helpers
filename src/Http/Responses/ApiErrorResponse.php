@@ -13,20 +13,20 @@ final readonly class ApiErrorResponse implements Responsable
     use ReturnsJsonResponse;
 
     public function __construct(
-        private readonly string $title,
-        private readonly string $description,
+        private readonly string $message,
+        private readonly string $details,
         private readonly Status $status = Status::INTERNAL_SERVER_ERROR,
     ) {
     }
 
     /**
-     * @return array{title:string,description:string,status:int}
+     * @return array{message:string,details:string,status:int}
      */
     public function getData(): array
     {
         return [
-            'title' => $this->title,
-            'description' => $this->description,
+            'message' => $this->message,
+            'details' => $this->details,
             'status' => $this->status->value,
         ];
     }

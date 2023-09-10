@@ -12,16 +12,16 @@ use function Safe\json_decode;
 it('can create a new Api Error Response', function (): void {
     expect(
         new ApiErrorResponse(
-            title: 'Error',
-            description: 'This is error!',
+            message: 'Error',
+            details: 'This is error!',
         ),
     )->toBeInstanceOf(ApiErrorResponse::class);
 });
 
 it('can create a Json Response', function (): void {
     $response = (new ApiErrorResponse(
-        title: 'Error',
-        description: 'This is error!',
+        message: 'Error',
+        details: 'This is error!',
     ))->toResponse(
         request: Request::create(
             uri: '/',
@@ -36,8 +36,8 @@ it('can create a Json Response', function (): void {
     )->toBeArray()->and(
         json_decode($response->getContent())
     )->toMatchObject([
-        'title' => 'Error',
-        'description' => 'This is error!',
+        'message' => 'Error',
+        'details' => 'This is error!',
         'status' => Status::INTERNAL_SERVER_ERROR->value,
     ]);
 });
